@@ -1,0 +1,110 @@
+mysql> use university_management_system;
+Database changed
+mysql> show tables;
++----------------------------------------+
+| Tables_in_university_management_system |
++----------------------------------------+
+| admin                                  |
+| employee                               |
+| employee_att                           |
+| fee                                    |
+| marks                                  |
+| student                                |
+| student_att                            |
+| subject                                |
++----------------------------------------+
+mysql> desc admin;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| username | varchar(50) | NO   | PRI | NULL    |       |
+| password | varchar(50) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+mysql> desc employee;
++-----------------------+-------------+------+-----+---------+-------+
+| Field                 | Type        | Null | Key | Default | Extra |
++-----------------------+-------------+------+-----+---------+-------+
+| emp_id                | varchar(20) | NO   | PRI | NULL    |       |
+| name                  | varchar(20) | YES  |     | NULL    |       |
+| age                   | varchar(5)  | YES  |     | NULL    |       |
+| dob                   | varchar(20) | YES  |     | NULL    |       |
+| address               | varchar(50) | YES  |     | NULL    |       |
+| phone                 | varchar(10) | YES  |     | NULL    |       |
+| email                 | varchar(30) | YES  |     | NULL    |       |
+| aadhar                | varchar(16) | YES  |     | NULL    |       |
+| course                | varchar(25) | YES  |     | NULL    |       |
+| dept                  | varchar(25) | YES  |     | NULL    |       |
+| highest_qualification | varchar(20) | YES  |     | NULL    |       |
+| position              | varchar(20) | YES  |     | NULL    |       |
++-----------------------+-------------+------+-----+---------+-------+
+mysql> desc student;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| rollno       | varchar(10) | NO   | PRI | NULL    |       |
+| name         | varchar(20) | YES  |     | NULL    |       |
+| fathers_name | varchar(20) | YES  |     | NULL    |       |
+| age          | varchar(5)  | YES  |     | NULL    |       |
+| dob          | varchar(20) | YES  |     | NULL    |       |
+| address      | varchar(30) | YES  |     | NULL    |       |
+| phone        | varchar(15) | YES  |     | NULL    |       |
+| email        | varchar(25) | YES  |     | NULL    |       |
+| class_x      | varchar(10) | YES  |     | NULL    |       |
+| class_xii    | varchar(10) | YES  |     | NULL    |       |
+| aadhar       | varchar(15) | YES  |     | NULL    |       |
+| course       | varchar(10) | YES  |     | NULL    |       |
+| branch       | varchar(20) | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+mysql> desc employee_attendance;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| emp_id     | varchar(10) | NO   | PRI | NULL    |       |
+| Date       | date        | NO   | PRI | NULL    |       |
+| attendance | varchar(10) | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+mysql> desc student_attendance;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| rollno     | varchar(10) | NO   | PRI | NULL    |       |
+| Date       | date        | NO   | PRI | NULL    |       |
+| attendance | varchar(10) | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+
+mysql> desc subject;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| rollno   | varchar(15) | NO   | PRI | NULL    |       |
+| subject1 | varchar(20) | YES  |     | NULL    |       |
+| subject2 | varchar(20) | YES  |     | NULL    |       |
+| subject3 | varchar(20) | YES  |     | NULL    |       |
+| subject4 | varchar(20) | YES  |     | NULL    |       |
+| subject5 | varchar(20) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
+mysql> desc marks;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| rollno | varchar(15) | NO   | PRI | NULL    |       |
+| marks1 | varchar(20) | YES  |     | NULL    |       |
+| marks2 | varchar(20) | YES  |     | NULL    |       |
+| marks3 | varchar(20) | YES  |     | NULL    |       |
+| marks4 | varchar(20) | YES  |     | NULL    |       |
+| marks5 | varchar(20) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+
+mysql> desc fee;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| rollno       | varchar(20) | NO   | PRI | NULL    |       |
+| name         | varchar(25) | YES  |     | NULL    |       |
+| fathers_name | varchar(25) | YES  |     | NULL    |       |
+| course       | varchar(10) | YES  |     | NULL    |       |
+| branch       | varchar(20) | YES  |     | NULL    |       |
+| semester     | varchar(10) | YES  |     | NULL    |       |
+| fee_paid     | varchar(15) | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
